@@ -14,6 +14,11 @@ app.use(cors())
 
 //routes
 app.use('/server/marcas',require('../routes/marcas.routes')) //MONGO
+app.use('/server/categorias',require('../routes/categorias.routes')) //MONGO
+app.use('/server/pilas',require('../routes/tipopilas.routes')) //MONGO
+app.use('/server/generos',require('../routes/generos.routes')) //MONGO
+app.use('/server/materiales',require('../routes/material.routes')) //MONGO
+app.use('/server/subcategorias',require('../routes/subcategorias.routes')) //MONGO
 //app.use('/server/marcas',require('../routes/marcas.routes.mysql')) //MYSQL
 
 //server
