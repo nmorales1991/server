@@ -8,26 +8,26 @@ app.post('/', (req,res)=>{
     let body = req.body
     Usuarios.findOne({rut_usuario:body.rut_usuario},(err,usuario)=>{
         if(err){
-            return res.status(500).json({
+            return res.status(500).send({
                 ok:false,
                 err
             })
         }
 
         if(!usuario){
-            return res.status(400).json({
+            return res.status(400).send({
                 ok:false,
                 err:{
-                    message:'(Usuario) o contraseña incorrectos'
+                    message:'user'
                 }
             })
         }
 
         if(!bcrypt.compareSync(body.clave_usuario,usuario.clave_usuario)){
-            return res.status(400).json({
+            return res.status(400).send({
                 ok:false,
                 err:{
-                    message:'Usuario o (contraseña) incorrectos'
+                    message:'pass'
                 }
             })
         }

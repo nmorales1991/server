@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const _ = require('underscore') 
 const {verificarToken} = require('../middleware/authentication')
 
-app.get("/",verificarToken, async (req, res) => {
+app.get("/", async (req, res) => {
   await Usuarios.find()
     .populate("perfil_usuario", "nombre_perfil")
     .exec((err, usuario) => {

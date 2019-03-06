@@ -13,7 +13,7 @@ app.use(morgan("dev"));
 app.use(cors());
 
 //routes
-app.use(require("../routes/indes.routes")); //MONGO
+app.use(require("../routes/index.routes")); //MONGO
 //app.use('/server/marcas',require('../routes/marcas.mysql.routes')) //MYSQL
 
 //server

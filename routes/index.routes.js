@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 const {verificarToken} = require('../middleware/authentication')
 
-app.use("/server/marcas",verificarToken, require("./marcas.routes")); //MONGO
-app.use("/server/categorias",verificarToken, require("./categorias.routes")); //MONGO
+app.use("/server/marcas", require("./marcas.routes")); //MONGO
+app.use("/server/categorias", require("./categorias.routes")); //MONGO
 app.use("/server/pilas", require("./tipopilas.routes")); //MONGO
 app.use("/server/generos", require("./generos.routes")); //MONGO
 app.use("/server/materiales", require("./material.routes")); //MONGO
