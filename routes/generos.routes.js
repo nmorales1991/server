@@ -60,8 +60,7 @@ app.post('/', async (req,res)=>{
 app.put('/:id', async (req,res)=>{
     let body = req.body
     const new_genero = {
-        nombre_categoria: body.nombre_categoria,
-        descripcion_categoria: body.descripcion_categoria
+        nombre_genero: body.nombre_genero
     }
 
     let id = req.params.id

@@ -50,7 +50,7 @@ app.post('/', async (req,res)=>{
         }
 
         res.json({
-            oki:true,
+            ok:true,
             marca:marcaGuardada
         })
     })

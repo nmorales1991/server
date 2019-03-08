@@ -11,10 +11,11 @@ let usuarioSchema = new Schema({
     },
     apaterno_usuario:{
         type:String,
-        required: [true, 'El apellido es necesario']
+        required: [true, 'El apellido paterno es necesario']
     },
     amaterno_usuario:{
-        type:String
+        type:String,
+        required:[true, 'El apellido materno es necesario']
     },
     email_usuario:{
         type:String,

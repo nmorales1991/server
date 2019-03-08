@@ -13,5 +13,7 @@ app.use("/server/formapago", require("./formapago.routes")); //MONGO
 app.use("/server/perfil", require("./perfil.routes")); //MONGO
 app.use("/server/usuarios", require("./usuarios.routes")); //MONGO
 app.use("/server/login", require("./login.routes")); //MONGO
+app.use("/server/proveedores", require("./proveedores.routes")); //MONGO
+app.use("/server/productos", require("./productos.routes")); //MONGO
 
 module.exports = app
