@@ -37,7 +37,6 @@ app.get('/:id',async (req,res)=>{
 
 app.post('/', async (req,res)=>{
     let body = req.body
-
     let new_genero = new Generos({//se crea un objeto según el esquema
         nombre_genero:body.nombre_genero
     })

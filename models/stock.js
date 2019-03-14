@@ -16,6 +16,10 @@ let stockSchema = new Schema({//crear nuevo esquema para mongoDB
         type:Schema.Types.ObjectId,
         ref:'TipoStock',//nombre de la colección con la cual se hará el populate
         required: true
+    },
+    fechareg_historial:{
+        type:Date,
+        default:Date.now
     }
 })
 

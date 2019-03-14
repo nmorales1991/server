@@ -18,6 +18,7 @@ app.use("/server/productos", require("./productos.routes")); //MONGO
 app.use("/server/precios", require("./historicoprecios.routes")); //MONGO
 app.use("/server/stock", require("./historicostock.routes")); //MONGO
 app.use("/server/ventas", require("./ventas.routes")); //MONGO
+app.use("/server/detalles", require("./ventasdetalle.routes")); //MONGO
 
 
 module.exports = app
