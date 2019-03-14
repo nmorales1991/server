@@ -15,5 +15,9 @@ app.use("/server/usuarios", require("./usuarios.routes")); //MONGO
 app.use("/server/login", require("./login.routes")); //MONGO
 app.use("/server/proveedores", require("./proveedores.routes")); //MONGO
 app.use("/server/productos", require("./productos.routes")); //MONGO
+app.use("/server/precios", require("./historicoprecios.routes")); //MONGO
+app.use("/server/stock", require("./historicostock.routes")); //MONGO
+app.use("/server/ventas", require("./ventas.routes")); //MONGO
+
 
 module.exports = app

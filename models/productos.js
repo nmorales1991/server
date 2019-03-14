@@ -10,8 +10,13 @@ let productoSchema = new Schema({
     modelo: { type: String },
     descripcion: { type: String },
     color: { type: String },
+    a_pilas: { type: Boolean },
+    incluye_pilas: { type: Boolean },
+    cantidad_pilas: { type: Number },
+    edad: { type: Number },
     material: { type: Schema.Types.ObjectId, ref: "Material" },
     genero: { type: Schema.Types.ObjectId, ref: "Generos" },
+    tipo_pila: { type: Schema.Types.ObjectId, ref: "Pilas" },
     categoria: { type: Schema.Types.ObjectId, ref: "Categorias" },
     subcategoria: { type: Schema.Types.ObjectId, ref: "Subcategorias" },
     usuarioreg: { type: Schema.Types.ObjectId, ref: "Usuarios" },
@@ -29,7 +34,8 @@ let productoSchema = new Schema({
     peso: { type: Number },
     precio_compra: { type: Number, default: 0 },
     youtube: { type: String },
-    estado_producto: { type: Number, default: 1 }
+    estado_producto: { type: Boolean, default: true },
+    hecho_en: { type: String }
 });
 
 productoSchema.plugin(uniqueValidator, { message: "{PATH} debe de ser único" });
