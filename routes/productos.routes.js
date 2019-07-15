@@ -251,7 +251,8 @@ app.put("/d/:id", async (req, res) => {
         "cantidad_pilas",
         "incluye_pilas",
         "edad",
-        "hecho_en"
+        "hecho_en",
+        "nombre"
     ]);
 
     await Producto.findByIdAndUpdate(
