@@ -12,6 +12,6 @@
     "mongoose-unique-validator": "^2.0.2",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   }
 }
